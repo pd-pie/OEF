@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<title></title>
+<style>
+
+	body {
+		padding: 35px 70px 35px 70px;
+		background-color: #F7FAFF;
+	}
+
+	div select {
+		padding: 8px;
+		border-radius: 4px;
+	}
+
+	.container {
+		padding: 55px 130px 55px 130px;
+		border: 3px solid #D4D6EC;
+		background-color: #FFFFF7;
+		border-radius: 2px;
+
+	}
+
+	.title {
+		text-align: center;
+
+	}
+
+	.school_name {
+		font-family: tahoma;
+		font-size: 20px;
+	}
+
+	.container2 {
+		border-top: 1px solid #EFF3E7;
+		padding-top: 20px;
+	}
+
+	select {
+	  font-size: 1rem;
+	  color: #343434!important;
+	}
+
+	.student_type {
+		width: 45%;
+		margin-bottom: 10px;
+		border: 1px solid #ccc;
+	}
+
+	.student_type:focus {
+		outline: none !important;
+		box-shadow: 0 0 5pt 2pt #D3D3D3;
+
+	}
+
+	.school_branch {
+		width: 40%;
+		float: right;
+		border: 1px solid #ccc;
+
+	}
+
+	.school_branch:focus {
+		outline: none !important;
+		box-shadow: 0 0 5pt 2pt #D3D3D3;
+	}
+
+	.semester {
+		width: 15%;
+		border: 1px solid #ccc;
+	}
+	.semester:focus {
+		outline: none !important;
+		box-shadow: 0 0 5pt 2pt #D3D3D3;
+	}
+
+	.method_of_teaching {
+		border: 1px solid #ccc;
+		width: 29.5%
+		
+	}
+
+	.method_of_teaching:focus {
+		outline: none !important;
+		box-shadow: 0 0 5pt 2pt #D3D3D3;
+	}
+
+	.LRN {
+
+		width: 38%;
+		float: right;
+		border: 1px solid #ccc;
+	}
+
+	.LRN:focus {
+		outline: none !important;
+		box-shadow: 0 0 5pt 2pt #D3D3D3;
+	}
+
+	.Senior_High_School {
+		width: ;
+		margin-top: 2%
+
+	}
+
+	.Grade {
+		width: 20% ;
+		float: right;
+		margin-left: 5%;
+		border: 1px solid #ccc;
+		
+	}
+
+	.Grade:focus {
+		outline: none !important;
+		box-shadow: 0 0 5pt 2pt #D3D3D3;
+	}
+
+	.Track {
+		width: 20%;
+		float: right;
+		border: 1px solid #ccc;
+		
+	}
+
+	.Track:focus {
+		outline: none !important;
+		box-shadow: 0 0 5pt 2pt #D3D3D3;
+	}
+
+	.year_level {
+		float: right;
+		width: 20%;
+		margin-left: 5%;
+		border: 1px solid #ccc;
+
+	}
+
+	.year_level:focus {
+		outline: none !important;
+		box-shadow: 0 0 5pt 2pt #D3D3D3;
+	}
+
+	.Course {
+		width: 20%;
+		float: right;
+		margin-left: 5%;
+		border: 1px solid #ccc;
+	}
+
+	.Course:focus {
+		outline: none !important;
+		box-shadow: 0 0 5pt 2pt #D3D3D3;
+	}
+
+	.custom-select {
+		border: 1px solid #ccc;
+	}
+
+	.custom-select:focus {
+		outline: none !important;
+		box-shadow: 0 0 5pt 2pt #D3D3D3;
+	}
+
+	.danger {
+		color: red;
+	}
+
+	.switch {
+	  position: relative;
+	  display: inline-block;
+	  width: 50px;
+	  height: 24px;
+	}
+
+	.switch input { 
+	  opacity: 0;
+	  width: 0;
+	  height: 0;
+	}
+
+	.slider {
+	  position: absolute;
+	  cursor: pointer;
+	  top: 0;
+	  left: 0;
+	  right: 0;
+	  bottom: 0;
+	  background-color: #ccc;
+	  -webkit-transition: .4s;
+	  transition: .4s;
+	}
+
+	.slider:before {
+	  position: absolute;
+	  content: "";
+	  height: 16px;
+	  width: 16px;
+	  left: 4px;
+	  bottom: 4px;
+	  background-color: white;
+	  -webkit-transition: .4s;
+	  transition: .4s;
+	}
+
+	input:checked + .slider {
+	  background-color: #2196F3;
+	}
+
+	input:focus + .slider {
+	  box-shadow: 0 0 1px #2196F3;
+	}
+
+	input:checked + .slider:before {
+	  -webkit-transform: translateX(26px);
+	  -ms-transform: translateX(26px);
+	  transform: translateX(26px);
+	}
+
+	/* Rounded sliders */
+	.slider.round {
+	  border-radius: 24px;
+	}
+
+	.slider.round:before {
+	  border-radius: 50%;
+	}
+
+	input {
+		padding: 8px;
+		border-radius: 4px;
+		outline: none !important;
+	}
+
+	.form-control {
+	  box-shadow: none;
+	  font-size: 1rem;
+	  color: #343434!important;
+	  width:
+	  padding: .375rem .75rem;
+	  line-height: 1.5;
+	  background-color: #fff;
+	  background-image: none;
+	  border: 1px solid #ccc;
+	  -webkit-border-radius: .25rem;
+	  border-radius: .25rem;
+	}
+
+	.form-control:focus {
+		outline: none !important;
+		box-shadow: 0 0 5pt 2pt #D3D3D3;
+	}
+
+	.submit {
+		width: 20%;
+		height: 25%;
+		float: right;
+		background-color: green;
+		border-radius: 2px;
+		color: white;
+		
+	}
+</style>
+
+<body>
+	<div class="container">
+		<div class="title">
+			<img src="logo/logo.jpg" align="" height="100" width="100">
+			<p class="school_name" style="">Clark College of Science and Technology</p>
+			<p style="">Online Enrollment Form</p>
+			<p style="">Applicant No.<u>001223</u></p>
+		</div>
+<br>
+	<form>
+		<div class="container2">
+			<div class="form-group">
+				<select class="student_type">
+
+					<option value="" hidden selected>Student type</option>
+					<option value="new">New</option>
+					<option value="transferee">Transferee</option>
+					<option value="secondcourser">Second Courser</option>
+				</select>
+
+				<select class="school_branch">
+					<option value="" hidden selected>School Branch</option>
+					<option value="new">BRANCH1</option>
+					<option value="transferee">BRANCH2</option>
+					<option value="secondcourser">BRANCH13</option>
+				</select>
+<br>
+				<select class="semester">
+					<option value="" hidden selected>Semester</option>
+					<option value="1st Semester">1st Semester</option>
+					<option value="2nd Semester">2nd Semester</option>
+					<option value="Summer">Summer</option>
+				</select>
+
+				<select class="method_of_teaching">
+					<option value="" hidden selected>Method of Teaching</option>
+					<option value="Online">Online</option>
+					<option value="Modular">Modular</option>
+					<option value="Soft Copy">Soft Copy</option>
+					<option value="Online and Modular">Online and Modular</option>
+				</select> 
+				
+				<input class="LRN" type="number" name="" placeholder="LRN">
+			</div>
+		</div>
+<br><hr><br>		
+			<div>
+				<input type="radio" name="gender"><label for="Senior High School">Senior High School</label>
+				<select class="Grade">
+					<option value="" hidden selected="">Grade</option>
+					<option value="Grade 11">Grade 11</option>
+					<option value="Grade 12">Grade 12</option>
+				</select>
+
+				<select class="Track">
+					<option value="" hidden selected="">Track</option>
+					<option value="Academic Track">Academic Track</option>
+					<option value="Technical-Vocational-Livelihood Track">Technical-Vocational-Livelihood Track</option>
+					<option value="Sports and ArtsTrack">Sports and Arts Track</option>
+				</select>
+			</div>	
+<br>
+				<input type="radio" name="gender"><label for="College">College</label>
+
+				<select class="Course">
+					<option value="" hidden selected="">Course</option>
+						<option value="1">BACHELOR OF SCIENCE IN COMPUTER SCIENCE</option>
+                        <option value="2">BACHELOR OF SCIENCE IN INFORMATION SYSTEMS</option>
+                        <option value="3">BACHELOR OF SCIENCE IN INFORMATION TECHNOLOGY (MAJOR IN NETWORK ADMINISTRATION)</option>
+                        <option value="4">BACHELOR OF SCIENCE IN INFORMATION TECHNOLOGY (MAJOR IN MOBILE DEVELOPMENT)</option>
+                        <option value="5">BACHELOR OF SCIENCE IN ENTERTAINMENT AND MULTIMEDIA COMPUTING (MAJOR IN GAME DEVELOPMENT)</option>
+                        <option value="6">BACHELOR OF SCIENCE IN ENTERTAINMENT AND MULTIMEDIA COMPUTING (MAJOR IN DIGITAL ANIMATION)</option>
+                        <option value="7">ASSOCIATE IN COMPUTER TECHNOLOGY</option>
+                        <option value="8">BACHELOR OF ARTS IN COMMUNICATION</option>
+                        <option value="9">BACHELOR OF SCIENCE IN SOCIAL WORK</option>
+                        <option value="10">BACHELOR OF ELEMENTARY EDUCATION</option>
+                        <option value="11">BACHELOR OF PHYSICAL EDUCATION</option>
+                        <option value="12">BACHELOR OF SECONDARY EDUCATION MAJOR IN MATHEMATICS</option>
+                        <option value="13">BACHELOR OF SECONDARY EDUCATION MAJOR IN ENGLISH</option>
+                        <option value="14">BACHELOR OF SCIENCE IN ACCOUNTING</option>
+                        <option value="15">BACHELOR OF SCIENCE IN ACCOUNTING INFORMATION</option>
+                        <option value="16">BACHELOR OF SCIENCE IN BUSINESS ADMINISTRATION</option>
+                        <option value="17">BACHELOR OF SCIENCE IN CUSTOMS ADMINISTRATION</option>
+                        <option value="18">BACHELOR OF SCIENCE IN OFFICE ADMINISTRATION</option>
+                        <option value="19">BACHELOR OF SCIENCE IN REAL ESTATE MANAGEMENT</option>
+                        <option value="20">BACHELOR OF SCIENCE IN COMPUTER ENGINEERING</option>
+                        <option value="21">BACHELOR OF SCIENCE IN ELECTRONICS ENGINEERING</option>
+                        <option value="22">BACHELOR OF SCIENCE IN NURSING</option>
+                        <option value="23">BACHELOR OF SCIENCE IN HOSPITALITY MANAGEMENT</option>
+                        <option value="24">BACHELOR OF SCIENCE IN TOURISM MANAGEMENT</option>
+                        <option value="25">BACHELOR OF SCIENCE IN CRIMINOLOGY</option>
+				</select>
+
+
+				<select class="year_level">
+					<option value="" hidden selected="" class="form-control">Year Level</option>
+					<option value="1st year">1st year</option>
+					<option value="2nd year">2nd year</option>
+					<option value="3rd year">3nd year</option>
+					<option value="4th year">4th year</option>
+					<option value="5th year">5th year</option>
+				</select>
+<br>
+<br>
+<br>
+
+<hr>
+
+
+				<label class="switch">
+				  <input type="checkbox">
+				  <span class="slider round"></span>
+				</label> <span>Toggle this switch if you have voucher or scholarship.</>
+
+				<div class="custom-control custom-switch">
+
+<hr>        
+	<span style="color: black"><strong>Full name</strong> </span>
+	<span class="danger">*</span></span> 
+
+				<br>
+				<label for="last name">Last Name:</label>
+				<input type="text" class="form-control" name="last_name" placeholder="Last Name" value="">
+
+				<label for="first name">First Name:</label>
+				<input type="text" class="form-control" name="first_name" placeholder="First Name" value="">
+
+				<label for="middle name">Middle Name:</label>
+				<input type="text" class="form-control" name="middle_name" placeholder="Middle Name" value="">
+<hr>
+	<span style="color: black"><strong>Personal Information</strong></span><br>
+
+			Birthdate:<span class="danger">*</span>
+            	<input type="date" class="form-control" placeholder="dd/mm/yyyy" name="birth_date" value="">
+            Birthplace:<span span class="danger">*</span>
+            	<input type="text" class="form-control" placeholder="Place of Birth" name="birth_place" value="">
+            Gender:<span class="danger">*</span>
+            	<select class="custom-select" name="gender">
+                	<option disabled selected hidden>Gender</option>
+                                <option value="FEMALE">FEMALE</option>
+                                <option value="MALE">MALE</option>
+                </select>
+<br><br>
+			Civil Status:<span class="danger">*</span>
+            	<select class="custom-select" name="civil_status">
+                	<option disabled selected hidden>Status</option>
+                        <option value="SINGLE">SINGLE</option>
+                        <option value="MARIED">MARIED</option>
+                        <option value="DIVORCED">DIVORCED</option>
+                        <option value="SEPERATED">SEPERATED</option>
+                        <option value="WIDOWED">WIDOWED</option>
+                </select>
+            Nationality:<span class="danger">*</span>
+            	<input type="text" class="form-control" placeholder="Nationality" name="nationality" value="">
+            Religion:
+            	<input type="text" class="form-control" placeholder="Religion" name="religion" value="">
+ <br>
+ <br>
+ 	<span style="color: black"><strong>Complete Address</strong></span><br>
+ <br>
+ 			 House No.:<span class="danger">*</span>
+            	<input type="text" class="form-control" placeholder="House No." id="address1" name="complete_house_number" value="">
+            Street Name:<span class="danger">*</span>
+            	<input type="text" class="form-control" placeholder="Street Name" id="address1_st" name="complete_street_name" value="">
+            Barangay:<span class="danger">*</span>
+            	<input type="text" class="form-control" placeholder="Barangay" name="complete_barangay" id="brgy1" value="">
+<br><br>
+			City:<span class="danger">*</span>
+            	<input type="text" class="form-control" placeholder="City" name="complete_city" id="city1" value="">
+        	Province:<span class="danger">*</span>
+            	<input type="text" class="form-control" placeholder="Province" name="complete_province" id="province1" value="">
+        	ZIP Code:
+            	<input type="number" class="form-control" placeholder="Zip Code" name="complete_zip_code" id="zip1" value="">
+<br><br>
+			
+	<label class="switch">
+		<input type="checkbox">
+				  <span class="slider round"></span>
+	</label> <span>Current address is the same as my provincial address</>
+
+	<div class="custom-control custom-switch">
+<br>
+<br>
+
+<hr>
+
+		<button type="button" class="submit" name="btn_submit">REGISTER</button>
+
+			</form>
+ 	</div>
+</body>
+</html>
